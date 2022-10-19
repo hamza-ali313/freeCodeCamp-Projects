@@ -1,0 +1,46 @@
+div#quote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div#text {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 32px;
+    font-size: 24px;
+    font-family: serif;
+    color: #0e544c99;
+    background-color: #69e2f6;
+    padding: 0px 96px;
+}
+.heaidng h2 {
+    font-family: emoji;
+    color: #2f6c76;
+    border-bottom: 2px solid #53c1ff;
+}
+.btns button {
+    background-color: bisque;
+    font-size: 19px;
+    border: none;
+    color: #487592;
+    font-family: emoji;
+}

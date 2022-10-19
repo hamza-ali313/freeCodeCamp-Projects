@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="quote-box">
+      <div class="container">
+        <div class="heaidng">
+          <h2>HADITH OF THE DAY</h2>
+        </div>
+        <div id="text">
+          <p></p>
+        </div>
+     
+        <div class="btns">
+          <div>
+            <button id="new-quote" onclick="newQuote()">NEXT HADITH</button>
+          </div>
+          <div>
+            <a
+              id="tweet-quote"
+              href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22An%20unexamined%20life%20is%20not%20worth%20living.%22%20Socrates"
+              target="_top"
+              >Tweet Quote</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const quotes = [
+        {
+          quote:
+            " 433. There are three types of eyes whom hell fire will not touch - the eye which keeps itself shut from the things forbidden by Allah, the eye which guards the frontiers of Islam and remains open to keep vigil over it and the eye which constantly sheds tears out of Allah's fear Tirmidhi.",
+        },
+        {
+          quote:
+          'Ibn Masud reported the Messenger of Allah as saying: "A woman is an object of concealment for when she goes out the devil presents her in alluring looks before men." ',
+        },
+        {
+          quote:
+          'The fornication of the eyes consists of looking, of ears in hearing, of the tongue in speech, of the hand in violence and of the foot in walking. The heart lusts and wishes and the private parts accord with that or reject it',
+        },
+      ];
+      const randomNumber = Math.floor(Math.random() * quotes.length);
+      document.getElementById("text").innerHTML = quotes[randomNumber].quote;
+      function newQuote() {
+        const randomNumber = Math.floor(Math.random() * quotes.length);
+        console.log(quotes[randomNumber]);
+        document.getElementById("text").innerHTML = quotes[randomNumber].quote;
+      }
+    </script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </body>
+</html>
